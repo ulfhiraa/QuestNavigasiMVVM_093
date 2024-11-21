@@ -44,7 +44,7 @@ fun FormMahasiswaView(
     // var bisa diubah
     var email by rememberSaveable { mutableStateOf("") }
     var alamat by rememberSaveable { mutableStateOf("") }
-    var noHP by rememberSaveable { mutableStateOf("") }
+    var NIM by rememberSaveable { mutableStateOf("") }
     var selectedGender by rememberSaveable { mutableStateOf("") }
 
     val dataMahasiswa: MutableList<String> = mutableListOf(nama, selectedGender, alamat)
@@ -107,10 +107,10 @@ fun FormMahasiswaView(
         )
 
         OutlinedTextField(
-            value = noHP,
-            onValueChange = {noHP = it},
-            placeholder = { Text("Masukkan no HP: ")},
-            label = { Text("No Hp")},
+            value = NIM,
+            onValueChange = {NIM = it},
+            placeholder = { Text("Masukkan NIM: ")},
+            label = { Text("NIM")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth().padding(5.dp)
         )
