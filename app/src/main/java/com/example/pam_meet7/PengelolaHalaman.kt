@@ -23,21 +23,25 @@ enum class Halaman{ // untuk menghandle halaman
 @Composable
 fun PengelolaHalaman(
     modifier: Modifier = Modifier,
-    navController: NavHostController = rememberNavController(),
-    viewModel: MahasiswaViewModel = viewModel()
+    viewModel: MahasiswaViewModel = viewModel(),
+    navHost: NavHostController = rememberNavController()
+// navHost untuk menampung informasi setiap halaman.
+// navHostController untuk mengatur navigasi
 ){
-    val uiState by viewModel.uiState.collectAsState()
+    val uiState by viewModel.uiState.collectAsState() // untuk menghubungkan data (state) dari viewModel ke UI
 
-    NavHost(navController = navController, startDestination = Halaman.Formulir.name ) {
+    NavHost(navController = navHost, startDestination = Halaman.Formulir.name ) {
         composable(route = Halaman.Formulir.name) // isinya adalah view formulir.
         {
             val konteks = LocalContext.current
-            FormMahasiswaView (listJK =  DataJK.listJK.map { id ->
-                konteks.resources.getString(
-                    id
-                )
+            FormMahasiswaView (
+                listJK =  DataJK.listJK.map {
+                    id -> konteks.resources.getString(id)
             },
-                    onSubmitClicked = {}
+                    onSubmitClicked = {
+                        viewModel.saveDataMahasiswa(it)
+                        navHost.navigate(Halaman.Detail.name)
+                    }
             )
         }
     }
