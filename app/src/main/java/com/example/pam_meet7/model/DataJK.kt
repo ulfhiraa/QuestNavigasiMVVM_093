@@ -7,4 +7,4 @@ object DataJK {
         R.string.laki,
         R.string.wanita
     )
-}
+} // objek data untuk jenis kelamin
