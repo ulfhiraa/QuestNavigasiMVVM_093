@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.pam_meet7.model.DataJK
+import com.example.pam_meet7.ui.view.DetailMahasiswaView
 import com.example.pam_meet7.ui.view.FormMahasiswaView
 import com.example.pam_meet7.ui.viewmodel.MahasiswaViewModel
 
@@ -40,8 +41,13 @@ fun PengelolaHalaman(
             },
                     onSubmitClicked = {
                         viewModel.saveDataMahasiswa(it)
-                        navHost.navigate(Halaman.Detail.name)
+                        navHost.navigate(Halaman.Detail.name) // Menggunakan navHost untuk berpindah ke halaman detail
                     }
+            )
+        }
+        composable(route = Halaman.Detail.name){
+            DetailMahasiswaView(
+
             )
         }
     }
