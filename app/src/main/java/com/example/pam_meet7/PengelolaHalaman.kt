@@ -47,7 +47,7 @@ fun PengelolaHalaman(
         }
         composable(route = Halaman.Detail.name){
             DetailMahasiswaView(
-
+                uiStateMahasiswa = uiState,
             )
         }
     }
