@@ -1,5 +1,8 @@
 Halaman Input 
-![Halaman Input](https://github.com/user-attachments/assets/3f425905-9942-49e7-861e-79fbe8ba2775)
+![Halaman Input](https://github.com/user-attachments/assets/8c1761e1-4717-4c93-8e65-a8f653f21d63)
 
 Halaman Hasil Data
-![Halaman Hasil Data](https://github.com/user-attachments/assets/f6dc417e-3399-4b4c-b903-0ec3663c1677)
+![Halaman Hasil Data](https://github.com/user-attachments/assets/5c4cd535-7003-42c8-a11b-07a96dba9c1e)
+
+
+
