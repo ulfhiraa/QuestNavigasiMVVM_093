@@ -47,7 +47,7 @@ fun FormMahasiswaView(
     var NIM by rememberSaveable { mutableStateOf("") }
     var selectedGender by rememberSaveable { mutableStateOf("") }
 
-    val dataMahasiswa: MutableList<String> = mutableListOf(nama, selectedGender, alamat)
+    val dataMahasiswa: MutableList<String> = mutableListOf(nama, selectedGender, alamat, NIM)
 
     Column (Modifier.fillMaxSize().padding(16.dp),
 // Column digunakan untuk menata elemen secara vertikal (sejajar dalam satu kolom).
